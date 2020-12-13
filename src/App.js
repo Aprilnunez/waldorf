@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './reset.css';
+import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
+import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
+import Nav from './components/general/Nav/Nav';
+
 
 function App() {
+
+  const cartelSaludo = () => {
+    alert("Hola");
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav titulo="Waldorf" action={cartelSaludo} />
+
+      <FeaturedProducts />
+
+    </>
   );
 }
 
